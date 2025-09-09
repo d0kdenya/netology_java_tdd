@@ -20,9 +20,14 @@ public class PhoneBookTest {
     }
 
     @Test
-    public void testFindByNumberStub() {
+    public void testFindByNumber() {
         PhoneBook phoneBook = new PhoneBook();
         phoneBook.add("Alice", "12345");
-        assertNotNull(phoneBook.findByNumber("12345"));
+        phoneBook.add("Bob", "67890");
+
+        assertEquals("Alice", phoneBook.findByNumber("12345"));
+        assertEquals("Bob", phoneBook.findByNumber("67890"));
+        assertNull(phoneBook.findByNumber("00000"));
     }
+
 }
