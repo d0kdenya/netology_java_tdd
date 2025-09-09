@@ -2,7 +2,7 @@ package ru.netology;
 
 import org.junit.Test;
 
-import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.*;
 
 public class PhoneBookTest {
 
@@ -17,5 +17,12 @@ public class PhoneBookTest {
 
         size = phoneBook.add("Alice", "99999");
         assertEquals(2, size);
+    }
+
+    @Test
+    public void testFindByNumberStub() {
+        PhoneBook phoneBook = new PhoneBook();
+        phoneBook.add("Alice", "12345");
+        assertNotNull(phoneBook.findByNumber("12345"));
     }
 }
