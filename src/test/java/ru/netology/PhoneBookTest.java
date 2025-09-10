@@ -2,6 +2,8 @@ package ru.netology;
 
 import org.junit.Test;
 
+import java.util.List;
+
 import static org.junit.Assert.*;
 
 public class PhoneBookTest {
@@ -40,12 +42,12 @@ public class PhoneBookTest {
     }
 
     @Test
-    public void testPrintAllNamesStub() {
+    public void testPrintAllNames() {
         PhoneBook phoneBook = new PhoneBook();
         phoneBook.add("Charlie", "33333");
         phoneBook.add("Alice", "11111");
         phoneBook.add("Bob", "22222");
 
-        assertNotNull(phoneBook.printAllNames());
+        assertEquals(List.of("Alice", "Bob", "Charlie"), phoneBook.printAllNames());
     }
 }
