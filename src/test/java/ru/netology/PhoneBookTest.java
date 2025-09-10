@@ -34,6 +34,8 @@ public class PhoneBookTest {
     public void testFindByNameStub() {
         PhoneBook phoneBook = new PhoneBook();
         phoneBook.add("Alice", "12345");
-        assertNotNull(phoneBook.findByName("Alice"));
+
+        assertEquals("12345", phoneBook.findByName("Alice"));
+        assertNull(phoneBook.findByName("Bob"));
     }
 }
