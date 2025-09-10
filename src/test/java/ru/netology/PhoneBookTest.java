@@ -30,4 +30,10 @@ public class PhoneBookTest {
         assertNull(phoneBook.findByNumber("00000"));
     }
 
+    @Test
+    public void testFindByNameStub() {
+        PhoneBook phoneBook = new PhoneBook();
+        phoneBook.add("Alice", "12345");
+        assertNotNull(phoneBook.findByName("Alice"));
+    }
 }
